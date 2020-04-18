@@ -1,0 +1,15 @@
+ static int superDigit(String n, int k) 
+    {
+    
+        long sum=0;
+        for(int i=0;i<n.length();i++)
+        {
+            sum+=Integer.parseInt(n.valueOf(n.charAt(i)))*k;
+        }
+        String s=String.valueOf(sum);
+        if(s.length()==1)
+        return (int)sum;
+        else
+        return superDigit(s,1);
+        
+    }
