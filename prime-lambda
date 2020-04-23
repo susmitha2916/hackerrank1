@@ -1,0 +1,39 @@
+@FunctionalInterface
+interface Checkprime{
+		void Result(int a);
+	}
+public class Prime1 {
+	
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner in= new Scanner(System.in);
+		System.out.println("enter number");
+		int b=in.nextInt();
+		Checkprime p1=(int  a)->{
+			int flag = 0;
+        for(int i=2;i<=a/2;i++)
+      {
+           if(a%i==0)
+            {
+              flag = 1;
+              break; 
+            }
+           else
+            {
+              flag = 0;
+              break; 
+            }
+            
+      }
+      if(flag == 0)
+        System.out.println("it is primenumber");
+      else 
+         System.out.println("it is not primenumber");
+
+	};
+
+p1.Result(b);
+
+}
+}
