@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+@FunctionalInterface
+interface StringRev{
+	void Result(String a);
+}
+
+
+
+public class RevStr {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner in= new Scanner(System.in);
+		System.out.println("enter string");
+		String b=in.nextLine();
+		StringRev r1=(String a)->{
+			int i;
+			char []c1=b.toCharArray(); 
+			
+			for ( i = c1.length-1; i>=0; i--) 
+			{
+	            System.out.print(c1[i]); 
+	    } 
+			
+		
+		};
+		r1.Result(b);
+	}
+
+}
