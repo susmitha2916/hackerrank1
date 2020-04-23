@@ -1,0 +1,25 @@
+@FunctionalInterface
+interface Even{
+	void Result(int a);
+}
+
+
+public class Result {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Even e1=(int a)->{
+			if(a%2==0)
+			{
+				System.out.println("it is a even number");
+			}
+			else {
+				System.out.println("it is a odd number");
+			}
+				
+		};
+		e1.Result(4);// calling a method,passing value to check
+		e1.Result(1);
+	}
+
+}
